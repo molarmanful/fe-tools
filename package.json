@@ -1,0 +1,34 @@
+{
+  "name": "fe-tools",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Personal configs for my frontend toolchain.",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsdown --clean --dts",
+    "tsc": "tsc",
+    "dev": "npx @eslint/config-inspector --config eslint.config.ts",
+    "lint": "eslint --fix"
+  },
+  "author": "Benjamin Pang <ben@benpa.ng> (https://benpa.ng)",
+  "license": "MIT",
+  "packageManager": "pnpm@10.12.1",
+  "dependencies": {
+    "@eslint/js": "^9.29.0",
+    "@stylistic/eslint-plugin": "^4.4.1",
+    "@types/node": "^24.0.1",
+    "eslint-flat-config-utils": "^2.1.0",
+    "eslint-plugin-perfectionist": "^4.14.0",
+    "eslint-plugin-unicorn": "^59.0.1",
+    "typescript-eslint": "^8.34.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.29.0",
+    "tsdown": "^0.12.7",
+    "typescript": "^5.8.3"
+  }
+}
