@@ -2,7 +2,6 @@ import stylistic from '@stylistic/eslint-plugin'
 import { composer } from 'eslint-flat-config-utils'
 
 export default composer(stylistic.configs.recommended, {
-  plugins: { '@stylistic': stylistic },
   rules: {
     '@stylistic/array-bracket-newline': ['error', 'consistent'],
     '@stylistic/array-element-newline': ['error', { consistent: true, multiline: true }],
