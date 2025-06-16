@@ -3,6 +3,7 @@ import { composer } from 'eslint-flat-config-utils'
 import tseslint from 'typescript-eslint'
 
 import perfectionist from './configs/perfectionist'
+import regexp from './configs/regexp'
 import stylistic from './configs/stylistic'
 import unicorn from './configs/unicorn'
 
@@ -16,6 +17,7 @@ export const molarmanfulConfig = (_: Options) => composer(
   stylistic,
   perfectionist,
   unicorn,
+  regexp,
   {
     ignores: [
       '**/node_modules',
