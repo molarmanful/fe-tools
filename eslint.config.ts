@@ -1,3 +1,3 @@
-import { molarmanfulConfig } from './src'
+import { molarmanfulLint } from './src'
 
-export default molarmanfulConfig({})
+export default molarmanfulLint()

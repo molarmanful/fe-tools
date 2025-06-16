@@ -23,12 +23,15 @@
     "eslint-flat-config-utils": "^2.1.0",
     "eslint-plugin-perfectionist": "^4.14.0",
     "eslint-plugin-regexp": "^2.9.0",
-    "eslint-plugin-unicorn": "^59.0.1",
-    "typescript-eslint": "^8.34.0"
+    "eslint-plugin-unicorn": "^59.0.1"
   },
   "devDependencies": {
     "eslint": "^9.29.0",
     "tsdown": "^0.12.7",
     "typescript": "^5.8.3"
+  },
+  "optionalDependencies": {
+    "eslint-plugin-svelte": "^3.9.2",
+    "typescript-eslint": "^8.34.0"
   }
 }

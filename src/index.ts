@@ -1,23 +1,21 @@
-import eslint from '@eslint/js'
 import { composer } from 'eslint-flat-config-utils'
-import tseslint from 'typescript-eslint'
 
+import js from './configs/js'
 import perfectionist from './configs/perfectionist'
 import regexp from './configs/regexp'
 import stylistic from './configs/stylistic'
+import svelte from './configs/svelte'
+import ts from './configs/ts'
 import unicorn from './configs/unicorn'
 
-interface Options {
-
-}
-
-export const molarmanfulConfig = (_: Options) => composer(
-  eslint.configs.recommended,
-  tseslint.configs.strictTypeChecked,
+export const molarmanfulLint = () => composer(
+  js,
+  ts(),
   stylistic,
   perfectionist,
   unicorn,
   regexp,
+  svelte(),
   {
     ignores: [
       '**/node_modules',
@@ -52,10 +50,5 @@ export const molarmanfulConfig = (_: Options) => composer(
       '**/auto-import?(s).d.ts',
       '**/components.d.ts',
     ],
-    languageOptions: {
-      parserOptions: {
-        projectService: true,
-      },
-    },
   },
 )
