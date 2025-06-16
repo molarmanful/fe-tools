@@ -4,6 +4,7 @@ import tseslint from 'typescript-eslint'
 
 import perfectionist from './configs/perfectionist'
 import stylistic from './configs/stylistic'
+import unicorn from './configs/unicorn'
 
 interface Options {
 
@@ -14,6 +15,7 @@ export const molarmanfulConfig = (_: Options) => composer(
   tseslint.configs.strictTypeChecked,
   stylistic,
   perfectionist,
+  unicorn,
   {
     ignores: [
       '**/node_modules',
