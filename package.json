@@ -10,7 +10,6 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsdown --clean --dts",
-    "tsc": "tsc",
     "dev": "npx @eslint/config-inspector --config eslint.config.ts",
     "lint": "eslint --fix"
   },
