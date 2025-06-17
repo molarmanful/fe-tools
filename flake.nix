@@ -26,11 +26,11 @@
               vtsls
               # formatters
               nixfmt-rfc-style
+              dprint
               # linters
               statix
               deadnix
               eslint
-              dprint
             ];
           };
 
