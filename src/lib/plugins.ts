@@ -14,6 +14,14 @@ export const svelteImport = async () => {
   }
 }
 
+export const svelteParserImport = async () => {
+  try {
+    return await import('svelte-eslint-parser')
+  } catch {
+    return
+  }
+}
+
 export const unocssImport = async () => {
   try {
     return await import('@unocss/eslint-config/flat')

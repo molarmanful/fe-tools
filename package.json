@@ -39,6 +39,7 @@
     "@unocss/eslint-config": "^66.2.2",
     "eslint": "^9.29.0",
     "eslint-plugin-svelte": "^3.9.2",
+    "svelte-eslint-parser": "^1.2.0",
     "typescript-eslint": "^8.34.0"
   },
   "peerDependenciesMeta": {
@@ -46,6 +47,9 @@
       "optional": true
     },
     "eslint-plugin-svelte": {
+      "optional": true
+    },
+    "svelte-eslint-parser": {
       "optional": true
     },
     "typescript-eslint": {
