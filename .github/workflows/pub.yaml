@@ -1,0 +1,22 @@
+name: Release to NPM
+on:
+  push:
+    tags: ["v*"]
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "*"
+          cache: pnpm
+      - run: pnpm i --frozen-lockfile
+      - run: pnpm build
+      - name: pub to npm
+        run: |
+          pnpm version ${{ github.ref_name }} --no-commit-hooks --no-git-tag-version --allow-same-version
+          pnpm publish --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
