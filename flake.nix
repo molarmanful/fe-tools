@@ -30,6 +30,7 @@
               statix
               deadnix
               eslint
+              dprint
             ];
           };
 

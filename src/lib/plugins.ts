@@ -1,8 +1,7 @@
 export const tsImport = async () => {
   try {
     return await import('typescript-eslint')
-  }
-  catch {
+  } catch {
     return
   }
 }
@@ -10,8 +9,15 @@ export const tsImport = async () => {
 export const svelteImport = async () => {
   try {
     return await import('eslint-plugin-svelte')
+  } catch {
+    return
   }
-  catch {
+}
+
+export const unocssImport = async () => {
+  try {
+    return await import('@unocss/eslint-config/flat')
+  } catch {
     return
   }
 }

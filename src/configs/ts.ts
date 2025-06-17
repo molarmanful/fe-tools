@@ -4,6 +4,7 @@ import { tsImport } from '../lib/plugins'
 
 const ts = async () => {
   const tsPlugin = await tsImport()
+
   return tsPlugin
     ? composer(tsPlugin.configs.strictTypeChecked, {
       languageOptions: {
