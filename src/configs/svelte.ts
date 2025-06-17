@@ -11,21 +11,24 @@ const svelte = async (opts?: Opts) => {
   const svelteParser = await svelteParserImport()
 
   return sveltePlugin && svelteParser
-    ? composer(sveltePlugin.configs.prettier, {
-      files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
-      languageOptions: {
-        parser: svelteParser,
-        parserOptions: {
-          ...tsPlugin
-            ? {
-              extraFileExtensions: ['.svelte'],
-              parser: tsPlugin.parser,
-            }
-            : {},
-          svelteConfig,
+    ? composer(
+      sveltePlugin.configs.prettier,
+      {
+        files: ['**/*.svelte', '**/*.svelte.{ts,js}'],
+        languageOptions: {
+          parser: svelteParser,
+          parserOptions: {
+            ...tsPlugin
+              ? {
+                extraFileExtensions: ['.svelte'],
+                parser: tsPlugin.parser,
+              }
+              : {},
+            svelteConfig,
+          },
         },
       },
-    })
+    )
     : {}
 }
 

@@ -6,13 +6,21 @@ const ts = async () => {
   const tsPlugin = await tsImport()
 
   return tsPlugin
-    ? composer(tsPlugin.configs.strictTypeChecked, {
-      languageOptions: {
-        parserOptions: {
-          projectService: true,
+    ? composer(
+      tsPlugin.configs.strictTypeChecked,
+      {
+        files: ['**/*.{ts,mts,cts}'],
+        languageOptions: {
+          parserOptions: {
+            projectService: true,
+          },
         },
       },
-    })
+      {
+        files: ['**/*.{js,mjs,cjs}'],
+        ...tsPlugin.configs.disableTypeChecked,
+      },
+    )
     : {}
 }
 
