@@ -4,6 +4,8 @@ import { composer } from 'eslint-flat-config-utils'
 export default composer({
   plugins: { '@stylistic': stylistic },
   rules: {
-    '@stylistic/no-extra-parens': 'warn',
+    '@stylistic/no-extra-parens': ['warn', 'all', {
+      nestedConditionalExpressions: false,
+    }],
   },
 })
