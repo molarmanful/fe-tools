@@ -3,11 +3,11 @@ import { composer } from 'eslint-flat-config-utils'
 import { Opts, toGlobals } from '../lib/opts'
 import { svelteImport, tsImport } from '../lib/plugins'
 
-const svelte = async (opts?: Opts) => {
+const svelte = async (opts: Opts) => {
   const {
     parserOptions,
     envModes = [],
-  } = opts?.svelte ?? {}
+  } = opts.svelte ?? {}
 
   const [tsPlugin, sveltePlugin] = await Promise.all([
     tsImport(),

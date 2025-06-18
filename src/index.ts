@@ -10,7 +10,7 @@ import unicorn from './configs/unicorn'
 import unocss from './configs/unocss'
 import { Opts } from './lib/opts'
 
-export const molarmanfulLint = (opts?: Opts) =>
+export const molarmanfulLint = (opts: Opts = {}) =>
   composer(
     js,
     ts(opts),

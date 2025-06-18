@@ -7,7 +7,7 @@ const ts = async (opts: Opts) => {
   const {
     parserOptions,
     envModes = [],
-  } = opts?.ts ?? {}
+  } = opts.ts ?? {}
 
   const tsPlugin = await tsImport()
 
