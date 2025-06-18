@@ -1,3 +1,4 @@
+import gitignore from 'eslint-config-flat-gitignore'
 import { composer } from 'eslint-flat-config-utils'
 
 import js from './configs/js'
@@ -12,6 +13,7 @@ import { Opts } from './lib/opts'
 
 export const molarmanfulLint = (opts: Opts = {}) =>
   composer(
+    gitignore({ strict: false }),
     js,
     ts(opts),
     stylistic,
