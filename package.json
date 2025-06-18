@@ -18,10 +18,12 @@
   "packageManager": "pnpm@10.12.1",
   "dependencies": {
     "@eslint/js": "^9.29.0",
+    "@stylistic/eslint-plugin": "^4.4.1",
     "eslint-flat-config-utils": "^2.1.0",
     "eslint-plugin-perfectionist": "^4.14.0",
     "eslint-plugin-regexp": "^2.9.0",
-    "eslint-plugin-unicorn": "^59.0.1"
+    "eslint-plugin-unicorn": "^59.0.1",
+    "globals": "^16.2.0"
   },
   "files": [
     "LICENSE",
@@ -30,7 +32,6 @@
     "dist/"
   ],
   "devDependencies": {
-    "@sveltejs/kit": "^2.21.5",
     "@types/node": "^24.0.3",
     "tsdown": "^0.12.8",
     "typescript": "^5.8.3"
@@ -39,7 +40,6 @@
     "@unocss/eslint-config": "^66.2.2",
     "eslint": "^9.29.0",
     "eslint-plugin-svelte": "^3.9.2",
-    "svelte-eslint-parser": "^1.2.0",
     "typescript-eslint": "^8.34.0"
   },
   "peerDependenciesMeta": {
@@ -47,9 +47,6 @@
       "optional": true
     },
     "eslint-plugin-svelte": {
-      "optional": true
-    },
-    "svelte-eslint-parser": {
       "optional": true
     },
     "typescript-eslint": {

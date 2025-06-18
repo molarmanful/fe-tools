@@ -1,22 +1,26 @@
 import { composer } from 'eslint-flat-config-utils'
 
-import { Opts } from '../lib/opts'
-import { svelteImport, svelteParserImport, tsImport } from '../lib/plugins'
+import { Opts, toGlobals } from '../lib/opts'
+import { svelteImport, tsImport } from '../lib/plugins'
 
 const svelte = async (opts?: Opts) => {
-  const { svelteConfig } = opts ?? {}
+  const {
+    parserOptions,
+    envModes = [],
+  } = opts?.svelte ?? {}
 
-  const tsPlugin = await tsImport()
-  const sveltePlugin = await svelteImport()
-  const svelteParser = await svelteParserImport()
+  const [tsPlugin, sveltePlugin] = await Promise.all([
+    tsImport(),
+    svelteImport(),
+  ])
 
-  return sveltePlugin && svelteParser
+  return sveltePlugin
     ? composer(
       sveltePlugin.configs.prettier,
       {
-        files: ['**/*.svelte', '**/*.svelte.{ts,js}'],
+        files: ['**/*.svelte', '**/*.svelte.{js,ts}'],
         languageOptions: {
-          parser: svelteParser,
+          globals: toGlobals(['browser', ...envModes]),
           parserOptions: {
             ...tsPlugin
               ? {
@@ -24,7 +28,7 @@ const svelte = async (opts?: Opts) => {
                 parser: tsPlugin.parser,
               }
               : {},
-            svelteConfig,
+            ...parserOptions,
           },
         },
       },

@@ -1,12 +1,12 @@
 import { composer } from 'eslint-flat-config-utils'
 
-import { tsImport } from '../lib/plugins'
+import { unocssImport } from '../lib/plugins'
 
 const unocss = async () => {
-  const unocssPlugin = await tsImport()
+  const unocssPlugin = await unocssImport()
 
   return unocssPlugin
-    ? composer(unocssPlugin.configs.recommended)
+    ? composer(unocssPlugin)
     : {}
 }
 

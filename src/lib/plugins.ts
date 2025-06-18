@@ -1,6 +1,7 @@
 export const tsImport = async () => {
   try {
-    return await import('typescript-eslint')
+    const res = await import('typescript-eslint')
+    return res.default
   } catch {
     return
   }
@@ -8,15 +9,8 @@ export const tsImport = async () => {
 
 export const svelteImport = async () => {
   try {
-    return await import('eslint-plugin-svelte')
-  } catch {
-    return
-  }
-}
-
-export const svelteParserImport = async () => {
-  try {
-    return await import('svelte-eslint-parser')
+    const res = await import('eslint-plugin-svelte')
+    return res.default
   } catch {
     return
   }
@@ -24,7 +18,8 @@ export const svelteParserImport = async () => {
 
 export const unocssImport = async () => {
   try {
-    return await import('@unocss/eslint-config/flat')
+    const res = await import('@unocss/eslint-config/flat')
+    return res.default
   } catch {
     return
   }

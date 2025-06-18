@@ -1,3 +1,7 @@
 import { molarmanfulLint } from './src'
 
-export default molarmanfulLint()
+export default molarmanfulLint({
+  ts: {
+    envModes: ['node'],
+  },
+})
