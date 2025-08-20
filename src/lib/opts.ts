@@ -4,7 +4,7 @@ import globals from 'globals'
 
 export type Opts = Partial<{ debug: boolean } & Record<Key, Partial<Opt>>>
 
-type Key = 'ts' | 'svelte' | 'unocss'
+type Key = 'ts' | 'svelte'
 
 interface Opt {
   parserOptions: Linter.ParserOptions
