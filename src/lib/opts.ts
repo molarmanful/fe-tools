@@ -7,6 +7,7 @@ export type Opts = Partial<Record<Key, Partial<Opt>>>
 type Key = 'ts' | 'svelte'
 
 interface Opt {
+  enabled: boolean
   parserOptions: Linter.ParserOptions
   envModes: EnvMode[]
 }

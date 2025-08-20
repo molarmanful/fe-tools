@@ -1,26 +1,19 @@
-export const tsImport = async () => {
-  try {
-    const res = await import('typescript-eslint')
-    return res.default
-  } catch {
-    return
-  }
+let tsMod: Awaited<(typeof import('typescript-eslint'))['default']>
+export const tsImport = async (load = true) => {
+  if (!tsMod && load) tsMod = (await import('typescript-eslint')).default
+  return tsMod
 }
 
-export const svelteImport = async () => {
-  try {
-    const res = await import('eslint-plugin-svelte')
-    return res.default
-  } catch {
-    return
-  }
+let svelteMod: Awaited<(typeof import('eslint-plugin-svelte'))['default']>
+export const svelteImport = async (load = true) => {
+  if (!svelteMod && load)
+    svelteMod = (await import('eslint-plugin-svelte')).default
+  return svelteMod
 }
 
-export const unocssImport = async () => {
-  try {
-    const res = await import('@unocss/eslint-config/flat')
-    return res.default
-  } catch {
-    return
-  }
+let unocssMod: Awaited<(typeof import('@unocss/eslint-config/flat'))['default']>
+export const unocssImport = async (load = true) => {
+  if (!unocssMod && load)
+    unocssMod = (await import('@unocss/eslint-config/flat')).default
+  return unocssMod
 }

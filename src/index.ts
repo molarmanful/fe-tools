@@ -21,5 +21,5 @@ export const molarmanfulLint = (opts: Opts = {}) =>
     unicorn,
     regexp,
     svelte(opts),
-    unocss(),
+    unocss(opts),
   )
