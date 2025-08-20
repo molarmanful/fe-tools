@@ -2,12 +2,11 @@ import type { Linter } from 'eslint'
 
 import globals from 'globals'
 
-export type Opts = Partial<Record<Key, Partial<Opt>>>
+export type Opts = Partial<{ debug: boolean } & Record<Key, Partial<Opt>>>
 
 type Key = 'ts' | 'svelte' | 'unocss'
 
 interface Opt {
-  enabled: boolean
   parserOptions: Linter.ParserOptions
   envModes: EnvMode[]
 }
