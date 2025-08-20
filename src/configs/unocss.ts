@@ -8,7 +8,7 @@ import { unocssImport, unocssMod } from '../lib/plugins'
 const unocss = async (opts: Opts) => {
   const {
     enabled = false,
-  } = opts.ts ?? {}
+  } = opts.unocss ?? {}
 
   if (!enabled) return {}
 

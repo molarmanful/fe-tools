@@ -4,7 +4,7 @@ import globals from 'globals'
 
 export type Opts = Partial<Record<Key, Partial<Opt>>>
 
-type Key = 'ts' | 'svelte'
+type Key = 'ts' | 'svelte' | 'unocss'
 
 interface Opt {
   enabled: boolean
