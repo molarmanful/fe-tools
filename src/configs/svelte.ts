@@ -1,7 +1,9 @@
+import assert from 'node:assert'
+
 import { composer } from 'eslint-flat-config-utils'
 
 import { Opts, toGlobals } from '../lib/opts'
-import { svelteImport, tsImport } from '../lib/plugins'
+import { svelteImport, svelteMod, tsMod } from '../lib/plugins'
 
 const svelte = async (opts: Opts) => {
   const {
@@ -12,22 +14,20 @@ const svelte = async (opts: Opts) => {
 
   if (!enabled) return {}
 
-  const [tsPlugin, sveltePlugin] = await Promise.all([
-    tsImport(false),
-    svelteImport(),
-  ])
+  await svelteImport()
+  assert.ok(svelteMod)
 
   return composer(
-    sveltePlugin.configs.prettier,
+    svelteMod.configs.prettier,
     {
       files: ['**/*.svelte', '**/*.svelte.{js,ts}'],
       languageOptions: {
         globals: toGlobals(['browser', ...envModes]),
         parserOptions: {
-          ...opts.ts?.enabled ?? true
+          ...tsMod
             ? {
               extraFileExtensions: ['.svelte'],
-              parser: tsPlugin.parser,
+              parser: tsMod.parser,
             }
             : {},
           ...parserOptions,

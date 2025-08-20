@@ -1,7 +1,9 @@
+import assert from 'node:assert'
+
 import { composer } from 'eslint-flat-config-utils'
 
 import { Opts } from '../lib/opts'
-import { unocssImport } from '../lib/plugins'
+import { unocssImport, unocssMod } from '../lib/plugins'
 
 const unocss = async (opts: Opts) => {
   const {
@@ -10,9 +12,10 @@ const unocss = async (opts: Opts) => {
 
   if (!enabled) return {}
 
-  const unocssPlugin = await unocssImport()
+  await unocssImport()
+  assert.ok(unocssMod)
 
-  return composer(unocssPlugin)
+  return composer(unocssMod)
 }
 
 export default unocss

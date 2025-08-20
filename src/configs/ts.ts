@@ -1,7 +1,9 @@
+import assert from 'node:assert'
+
 import { composer } from 'eslint-flat-config-utils'
 
 import { Opts, toGlobals } from '../lib/opts'
-import { tsImport } from '../lib/plugins'
+import { tsImport, tsMod } from '../lib/plugins'
 
 const ts = async (opts: Opts) => {
   const {
@@ -12,10 +14,11 @@ const ts = async (opts: Opts) => {
 
   if (!enabled) return {}
 
-  const tsPlugin = await tsImport()
+  await tsImport()
+  assert.ok(tsMod)
 
   return composer(
-    tsPlugin.configs.strictTypeChecked,
+    tsMod.configs.strictTypeChecked,
     {
       languageOptions: {
         globals: toGlobals(envModes),
@@ -27,7 +30,7 @@ const ts = async (opts: Opts) => {
     },
     {
       files: ['**/*.{js,mjs,cjs}'],
-      ...tsPlugin.configs.disableTypeChecked,
+      ...tsMod.configs.disableTypeChecked,
     },
   )
 }
