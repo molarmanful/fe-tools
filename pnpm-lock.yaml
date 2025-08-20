@@ -4,55 +4,103 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@eslint/js':
+      specifier: ^9.33.0
+      version: 9.33.0
+    '@stylistic/eslint-plugin':
+      specifier: ^5.2.3
+      version: 5.2.3
+    '@types/node':
+      specifier: ^24.3.0
+      version: 24.3.0
+    '@unocss/eslint-config':
+      specifier: ^66.4.2
+      version: 66.4.2
+    eslint:
+      specifier: ^9.33.0
+      version: 9.33.0
+    eslint-config-flat-gitignore:
+      specifier: ^2.1.0
+      version: 2.1.0
+    eslint-flat-config-utils:
+      specifier: ^2.1.1
+      version: 2.1.1
+    eslint-plugin-perfectionist:
+      specifier: ^4.15.0
+      version: 4.15.0
+    eslint-plugin-regexp:
+      specifier: ^2.10.0
+      version: 2.10.0
+    eslint-plugin-svelte:
+      specifier: ^3.11.0
+      version: 3.11.0
+    eslint-plugin-unicorn:
+      specifier: ^60.0.0
+      version: 60.0.0
+    globals:
+      specifier: ^16.3.0
+      version: 16.3.0
+    tsdown:
+      specifier: ^0.14.1
+      version: 0.14.1
+    typescript:
+      specifier: ^5.9.2
+      version: 5.9.2
+    typescript-eslint:
+      specifier: ^8.40.0
+      version: 8.40.0
+
 importers:
 
   .:
     dependencies:
       '@eslint/js':
-        specifier: ^9.33.0
+        specifier: 'catalog:'
         version: 9.33.0
       '@stylistic/eslint-plugin':
-        specifier: ^5.2.3
+        specifier: 'catalog:'
         version: 5.2.3(eslint@9.33.0(jiti@2.5.1))
       eslint-config-flat-gitignore:
-        specifier: ^2.1.0
+        specifier: 'catalog:'
         version: 2.1.0(eslint@9.33.0(jiti@2.5.1))
       eslint-flat-config-utils:
-        specifier: ^2.1.1
+        specifier: 'catalog:'
         version: 2.1.1
       eslint-plugin-perfectionist:
-        specifier: ^4.15.0
+        specifier: 'catalog:'
         version: 4.15.0(eslint@9.33.0(jiti@2.5.1))(typescript@5.9.2)
       eslint-plugin-regexp:
-        specifier: ^2.10.0
+        specifier: 'catalog:'
         version: 2.10.0(eslint@9.33.0(jiti@2.5.1))
       eslint-plugin-unicorn:
-        specifier: ^60.0.0
+        specifier: 'catalog:'
         version: 60.0.0(eslint@9.33.0(jiti@2.5.1))
       globals:
-        specifier: ^16.3.0
+        specifier: 'catalog:'
         version: 16.3.0
     devDependencies:
       '@types/node':
-        specifier: ^24.3.0
+        specifier: 'catalog:'
         version: 24.3.0
       '@unocss/eslint-config':
-        specifier: ^66.4.2
+        specifier: 'catalog:'
         version: 66.4.2(eslint@9.33.0(jiti@2.5.1))(typescript@5.9.2)
       eslint:
-        specifier: ^9.33.0
+        specifier: 'catalog:'
         version: 9.33.0(jiti@2.5.1)
       eslint-plugin-svelte:
-        specifier: ^3.11.0
+        specifier: 'catalog:'
         version: 3.11.0(eslint@9.33.0(jiti@2.5.1))(svelte@5.34.3)
       tsdown:
-        specifier: ^0.14.1
+        specifier: 'catalog:'
         version: 0.14.1(typescript@5.9.2)
       typescript:
-        specifier: ^5.9.2
+        specifier: 'catalog:'
         version: 5.9.2
       typescript-eslint:
-        specifier: ^8.39.0
+        specifier: 'catalog:'
         version: 8.40.0(eslint@9.33.0(jiti@2.5.1))(typescript@5.9.2)
 
 packages:
