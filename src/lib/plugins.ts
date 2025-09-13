@@ -29,13 +29,13 @@ export const svelteImport = async ({ debug }: Opts) => {
 }
 
 export let unocssMod:
-  | Awaited<(typeof import('@unocss/eslint-config/flat'))['default']>
+  | Awaited<(typeof import('@unocss/eslint-plugin'))['default']>
   | undefined
 
 export const unocssImport = async ({ debug }: Opts) => {
   if (unocssMod) return
   try {
-    const mod = await import('@unocss/eslint-config/flat')
+    const mod = await import('@unocss/eslint-plugin')
     unocssMod = mod.default
   } catch (error) {
     if (debug) console.error('unocss module failed to load:', error)

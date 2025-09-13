@@ -7,7 +7,7 @@ const unocss = async (opts: Opts) => {
   await unocssImport(opts)
   if (!unocssMod) return
 
-  return composer(unocssMod)
+  return composer(unocssMod.configs.flat)
 }
 
 export default unocss

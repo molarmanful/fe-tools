@@ -22,16 +22,14 @@
     "dprint.json",
     "dist/"
   ],
-  "dependencies": {
-    "globals": "catalog:"
-  },
   "devDependencies": {
+    "globals": "catalog:",
     "@types/node": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "@unocss/eslint-config": "catalog:",
+    "@unocss/eslint-plugin": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-better-tailwindcss": "catalog:",
     "eslint-plugin-svelte": "catalog:",
