@@ -16,38 +16,33 @@
   "author": "Benjamin Pang <ben@benpa.ng> (https://benpa.ng)",
   "license": "MIT",
   "packageManager": "pnpm@10.12.1",
-  "dependencies": {
-    "@eslint/js": "catalog:",
-    "@stylistic/eslint-plugin": "catalog:",
-    "eslint-config-flat-gitignore": "catalog:",
-    "eslint-flat-config-utils": "catalog:",
-    "eslint-plugin-perfectionist": "catalog:",
-    "eslint-plugin-regexp": "catalog:",
-    "eslint-plugin-unicorn": "catalog:",
-    "globals": "catalog:"
-  },
   "files": [
     "LICENSE",
     "README.md",
     "dprint.json",
     "dist/"
   ],
+  "dependencies": {
+    "globals": "catalog:"
+  },
   "devDependencies": {
     "@types/node": "catalog:",
-    "@unocss/eslint-config": "catalog:",
-    "eslint": "catalog:",
-    "eslint-plugin-better-tailwindcss": "catalog:",
-    "eslint-plugin-svelte": "catalog:",
     "tsdown": "catalog:",
-    "typescript": "catalog:",
-    "typescript-eslint": "catalog:"
+    "typescript": "catalog:"
   },
   "peerDependencies": {
     "@unocss/eslint-config": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-better-tailwindcss": "catalog:",
     "eslint-plugin-svelte": "catalog:",
-    "typescript-eslint": "catalog:"
+    "typescript-eslint": "catalog:",
+    "@eslint/js": "catalog:",
+    "@stylistic/eslint-plugin": "catalog:",
+    "eslint-config-flat-gitignore": "catalog:",
+    "eslint-flat-config-utils": "catalog:",
+    "eslint-plugin-perfectionist": "catalog:",
+    "eslint-plugin-regexp": "catalog:",
+    "eslint-plugin-unicorn": "catalog:"
   },
   "peerDependenciesMeta": {
     "@unocss/eslint-config": {
