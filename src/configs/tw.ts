@@ -9,7 +9,12 @@ const tw = async (opts: Opts) => {
 
   return composer({
     plugins: { 'better-tailwindcss': twMod },
-    rules: twMod.configs.recommended.rules,
+    rules: {
+      ...twMod.configs.recommended.rules,
+      'better-tailwindcss/no-unregistered-classes': ['error', {
+        detectComponentClasses: true,
+      }],
+    },
   })
 }
 
