@@ -43,7 +43,7 @@
     "eslint-plugin-unicorn": "catalog:"
   },
   "peerDependenciesMeta": {
-    "@unocss/eslint-config": {
+    "@unocss/eslint-plugin": {
       "optional": true
     },
     "eslint-plugin-better-tailwindcss": {
