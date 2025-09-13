@@ -1,6 +1,6 @@
 {
   "name": "@molarmanful/fe-tools",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "type": "module",
   "description": "Personal configs for my frontend toolchain.",
   "exports": {
