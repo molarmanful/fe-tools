@@ -34,21 +34,26 @@
   ],
   "devDependencies": {
     "@types/node": "catalog:",
-    "tsdown": "catalog:",
-    "typescript": "catalog:",
     "@unocss/eslint-config": "catalog:",
     "eslint": "catalog:",
+    "eslint-plugin-better-tailwindcss": "catalog:",
     "eslint-plugin-svelte": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
     "typescript-eslint": "catalog:"
   },
   "peerDependencies": {
     "@unocss/eslint-config": "catalog:",
     "eslint": "catalog:",
+    "eslint-plugin-better-tailwindcss": "catalog:",
     "eslint-plugin-svelte": "catalog:",
     "typescript-eslint": "catalog:"
   },
   "peerDependenciesMeta": {
     "@unocss/eslint-config": {
+      "optional": true
+    },
+    "eslint-plugin-better-tailwindcss": {
       "optional": true
     },
     "eslint-plugin-svelte": {
