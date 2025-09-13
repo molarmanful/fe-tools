@@ -7,6 +7,7 @@ import regexp from './configs/regexp'
 import stylistic from './configs/stylistic'
 import svelte from './configs/svelte'
 import ts from './configs/ts'
+import tw from './configs/tw'
 import unicorn from './configs/unicorn'
 import unocss from './configs/unocss'
 import { Opts } from './lib/opts'
@@ -22,4 +23,5 @@ export const molarmanfulLint = (opts: Opts = {}) =>
     regexp,
     svelte(opts),
     unocss(opts),
+    tw(opts),
   )

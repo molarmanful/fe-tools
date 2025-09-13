@@ -41,3 +41,17 @@ export const unocssImport = async ({ debug }: Opts) => {
     if (debug) console.error('unocss module failed to load:', error)
   }
 }
+
+export let twMod:
+  | Awaited<(typeof import('eslint-plugin-better-tailwindcss'))['default']>
+  | undefined
+
+export const twImport = async ({ debug }: Opts) => {
+  if (unocssMod) return
+  try {
+    const mod = await import('eslint-plugin-better-tailwindcss')
+    twMod = mod.default
+  } catch (error) {
+    if (debug) console.error('unocss module failed to load:', error)
+  }
+}

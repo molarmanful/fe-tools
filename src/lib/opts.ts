@@ -2,13 +2,16 @@ import type { Linter } from 'eslint'
 
 import globals from 'globals'
 
-export type Opts = Partial<{ debug: boolean } & Record<Key, Partial<Opt>>>
-
-type Key = 'ts' | 'svelte'
-
-interface Opt {
-  parserOptions: Linter.ParserOptions
-  envModes: EnvMode[]
+export interface Opts {
+  debug?: boolean
+  ts?: {
+    parserOptions?: Linter.ParserOptions
+    envModes?: EnvMode[]
+  }
+  svelte?: {
+    parserOptions?: Linter.ParserOptions
+    envModes?: EnvMode[]
+  }
 }
 
 type EnvMode = keyof typeof globals
