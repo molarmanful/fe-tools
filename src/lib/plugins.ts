@@ -47,7 +47,7 @@ export let twMod:
   | undefined
 
 export const twImport = async ({ debug }: Opts) => {
-  if (unocssMod) return
+  if (twMod) return
   try {
     const mod = await import('eslint-plugin-better-tailwindcss')
     twMod = mod.default
