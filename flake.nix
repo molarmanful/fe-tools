@@ -40,6 +40,7 @@
             text = ''
               find . -iname '*.nix' -exec nixfmt {} \; -exec deadnix -e {} \; -exec statix fix {} \;
               pnpm lint
+              dprint fmt
             '';
           };
         };

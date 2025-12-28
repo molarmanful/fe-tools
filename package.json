@@ -11,7 +11,7 @@
   "scripts": {
     "build": "tsdown --clean --dts",
     "dev": "npx @eslint/config-inspector --config eslint.config.ts",
-    "lint": "eslint --fix"
+    "lint": "eslint"
   },
   "author": "Benjamin Pang <ben@benpa.ng> (https://benpa.ng)",
   "license": "MIT",
