@@ -7,6 +7,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    environment: publish
     permissions:
       contents: write
       id-token: write
@@ -30,5 +31,3 @@ jobs:
           file_pattern: package.json
           commit_message: "chore: bump version to ${{ github.ref_name }}"
       - run: pnpm publish --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
