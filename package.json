@@ -1,6 +1,6 @@
 {
   "name": "@molarmanful/fe-tools",
-  "version": "0.3.6",
+  "version": "0.0.0",
   "type": "module",
   "description": "Personal configs for my frontend toolchain.",
   "exports": {
@@ -15,6 +15,10 @@
   },
   "author": "Benjamin Pang <ben@benpa.ng> (https://benpa.ng)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/molarmanful/fe-tools.git"
+  },
   "packageManager": "pnpm@10.12.1",
   "files": [
     "LICENSE",
