@@ -28,6 +28,10 @@ const svelte = async (opts: Opts) => {
           ...parserOptions,
         },
       },
+      rules: {
+        // TODO: remove after https://github.com/sveltejs/svelte-eslint-parser/issues/657
+        '@typescript-eslint/no-confusing-void-expression': 'off',
+      },
     },
   )
 }
