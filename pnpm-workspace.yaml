@@ -7,7 +7,7 @@ catalog:
   '@stylistic/eslint-plugin': ^5.6.1
   eslint-config-flat-gitignore: ^2.1.0
   eslint-flat-config-utils: ^2.1.4
-  eslint-plugin-perfectionist: ^4.15.1
+  eslint-plugin-perfectionist: ^5.1.0
   eslint-plugin-regexp: ^2.10.0
   eslint-plugin-unicorn: ^61.0.2
   globals: ^16.5.0
