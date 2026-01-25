@@ -21,8 +21,7 @@ jobs:
           node-version: "*"
           registry-url: https://registry.npmjs.org
           cache: pnpm
-      - run: |
-          pnpm i
-          pnpm build
-          pnpm version '${{ github.ref_name }}' --no-commit-hooks --no-git-tag-version --allow-same-version
-          pnpm publish --no-git-checks --tag $([[ '${{ github.ref_name }}' =~ '-' ]] && printf 'next' || printf 'latest')
+      - run: pnpm i
+      - run: pnpm build
+      - run: pnpm version '${{ github.ref_name }}' --no-commit-hooks --no-git-tag-version --allow-same-version
+      - run: pnpm publish --no-git-checks --tag $([[ '${{ github.ref_name }}' =~ '-' ]] && printf 'next' || printf 'latest')
