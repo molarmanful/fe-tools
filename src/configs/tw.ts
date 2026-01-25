@@ -11,7 +11,7 @@ const tw = async (opts: Opts) => {
     plugins: { 'better-tailwindcss': twMod },
     rules: {
       ...twMod.configs.recommended.rules,
-      'better-tailwindcss/no-unregistered-classes': ['error', {
+      'better-tailwindcss/no-unknown-classes': ['error', {
         detectComponentClasses: true,
       }],
     },
