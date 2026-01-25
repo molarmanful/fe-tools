@@ -31,6 +31,16 @@ const svelte = async (opts: Opts) => {
       rules: {
         // TODO: remove after https://github.com/sveltejs/svelte-eslint-parser/issues/657
         '@typescript-eslint/no-confusing-void-expression': 'off',
+        'perfectionist/sort-imports': [
+          'error',
+          {
+            type: 'natural',
+            internalPattern: [
+              String.raw`^\$lib`,
+              String.raw`^\$app/types`,
+            ],
+          },
+        ],
       },
     },
   )
