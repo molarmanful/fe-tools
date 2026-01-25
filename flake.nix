@@ -25,7 +25,7 @@
               vscode-langservers-extracted
               vtsls
               # formatters
-              nixfmt-rfc-style
+              nixfmt
               dprint
               # linters
               statix
