@@ -6,42 +6,9 @@ settings:
 
 catalogs:
   default:
-    '@eslint/js':
-      specifier: ^9.39.2
-      version: 9.39.2
-    '@stylistic/eslint-plugin':
-      specifier: ^5.7.1
-      version: 5.7.1
     '@types/node':
       specifier: ^25.0.10
-      version: 25.0.10
-    '@unocss/eslint-plugin':
-      specifier: ^66.6.0
-      version: 66.6.0
-    eslint:
-      specifier: ^9.39.2
-      version: 9.39.2
-    eslint-config-flat-gitignore:
-      specifier: ^2.1.0
-      version: 2.1.0
-    eslint-flat-config-utils:
-      specifier: ^2.1.4
-      version: 2.1.4
-    eslint-plugin-better-tailwindcss:
-      specifier: ^4.0.1
-      version: 4.0.1
-    eslint-plugin-perfectionist:
-      specifier: ^5.4.0
-      version: 5.4.0
-    eslint-plugin-regexp:
-      specifier: ^3.0.0
-      version: 3.0.0
-    eslint-plugin-svelte:
-      specifier: ^3.14.0
-      version: 3.14.0
-    eslint-plugin-unicorn:
-      specifier: ^62.0.0
-      version: 62.0.0
+      version: 25.2.0
     globals:
       specifier: ^17.1.0
       version: 17.1.0
@@ -51,9 +18,6 @@ catalogs:
     typescript:
       specifier: ^5.9.3
       version: 5.9.3
-    typescript-eslint:
-      specifier: ^8.53.1
-      version: 8.53.1
 
 importers:
 
@@ -98,7 +62,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
-        version: 25.0.10
+        version: 25.2.0
       globals:
         specifier: 'catalog:'
         version: 17.1.0
@@ -345,8 +309,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@25.0.10':
-    resolution: {integrity: sha512-zWW5KPngR/yvakJgGOmZ5vTBemDoSqF3AcV/LrO5u5wTWyEAVVh+IT39G4gtyAkh3CtTZs8aX/yRM82OfzHJRg==}
+  '@types/node@25.2.0':
+    resolution: {integrity: sha512-DZ8VwRFUNzuqJ5khrvwMXHmvPe+zGayJhr2CDNiKB1WBE1ST8Djl00D0IC4vvNmHMdj6DlbYRIaFE7WHjlDl5w==}
 
   '@typescript-eslint/eslint-plugin@8.53.1':
     resolution: {integrity: sha512-cFYYFZ+oQFi6hUnBTbLRXfTJiaQtYE3t4O692agbBl+2Zy+eqSKWtPjhPXJu1G7j4RLjKgeJPDdq3EqOwmX5Ag==}
@@ -1427,7 +1391,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@25.0.10':
+  '@types/node@25.2.0':
     dependencies:
       undici-types: 7.16.0
 
