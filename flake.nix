@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    systems.url = "github:nix-systems/default";
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
@@ -11,14 +10,14 @@
   outputs =
     inputs@{ flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = import inputs.systems;
+      systems = inputs.nixpkgs.lib.systems.flakeExposed;
       perSystem =
-        { pkgs, self', ... }:
+        { pkgs, ... }:
         {
           devShells.default = pkgs.mkShell {
             packages = with pkgs; [
               nodejs_latest
-              pnpm
+              corepack
               # lsps
               nil
               nixd
@@ -32,16 +31,6 @@
               deadnix
               eslint
             ];
-          };
-
-          formatter = pkgs.writeShellApplication {
-            name = "linter";
-            runtimeInputs = self'.devShells.default.nativeBuildInputs;
-            text = ''
-              find . -iname '*.nix' -exec nixfmt {} \; -exec deadnix -e {} \; -exec statix fix {} \;
-              pnpm lint
-              dprint fmt
-            '';
           };
         };
     };
