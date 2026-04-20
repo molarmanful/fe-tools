@@ -3,7 +3,7 @@ catalog:
   '@stylistic/eslint-plugin': ^5.7.1
   '@types/node': ^25.6.0
   '@unocss/eslint-plugin': ^66.6.0
-  eslint: ^9.39.2
+  eslint: ^10.2.1
   eslint-config-flat-gitignore: ^2.1.0
   eslint-flat-config-utils: ^3.1.0
   eslint-plugin-better-tailwindcss: ^4.0.1
