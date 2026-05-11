@@ -12,6 +12,6 @@ catalog:
   eslint-plugin-svelte: ^3.14.0
   eslint-plugin-unicorn: ^62.0.0
   globals: ^17.5.0
-  tsdown: ^0.21.7
+  tsdown: ^0.22.0
   typescript: ^6.0.2
   typescript-eslint: ^8.53.1
