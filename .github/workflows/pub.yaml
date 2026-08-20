@@ -23,6 +23,6 @@ jobs:
           cache: pnpm
       - run: pnpm ci
       - run: pnpm build
-      - run: npm pkg set "version=${GITHUB_REF_NAME#v}"
+      - run: pnpm pkg set "version=${GITHUB_REF_NAME#v}"
       - run: pnpm publish --no-git-checks --tag $([[ '${{ github.ref_name }}' =~ '-' ]]
           && printf 'next' || printf 'latest')
