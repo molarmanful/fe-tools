@@ -19,7 +19,6 @@
     "type": "git",
     "url": "https://github.com/molarmanful/fe-tools.git"
   },
-  "packageManager": "pnpm@11.0.0-rc.0+sha512.1f08eadeea025e91448de6d5dee42a6c94764257000c043a9e36b8ff12849a72ebcb9c65fc1885094747249e52f53d8b73ada1181446bba81866810c8a4d3f6c",
   "files": [
     "LICENSE",
     "README.md",
@@ -27,24 +26,24 @@
     "dist/"
   ],
   "devDependencies": {
-    "globals": "catalog:",
-    "@types/node": "catalog:",
-    "tsdown": "catalog:",
-    "typescript": "catalog:"
+    "@types/node": "^26.2.0",
+    "globals": "^17.11.0",
+    "tsdown": "^0.22.14",
+    "typescript": "^6.0.2"
   },
   "peerDependencies": {
-    "@unocss/eslint-plugin": "catalog:",
-    "eslint": "catalog:",
-    "eslint-plugin-better-tailwindcss": "catalog:",
-    "eslint-plugin-svelte": "catalog:",
-    "typescript-eslint": "catalog:",
-    "@eslint/js": "catalog:",
-    "@stylistic/eslint-plugin": "catalog:",
-    "eslint-config-flat-gitignore": "catalog:",
-    "eslint-flat-config-utils": "catalog:",
-    "eslint-plugin-perfectionist": "catalog:",
-    "eslint-plugin-regexp": "catalog:",
-    "eslint-plugin-unicorn": "catalog:"
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@unocss/eslint-plugin": "^66.8.0",
+    "eslint": "^10.8.1",
+    "eslint-config-flat-gitignore": "^2.3.0",
+    "eslint-flat-config-utils": "^3.2.0",
+    "eslint-plugin-better-tailwindcss": "^4.7.0",
+    "eslint-plugin-perfectionist": "^5.10.1",
+    "eslint-plugin-regexp": "^3.2.0",
+    "eslint-plugin-svelte": "^3.23.0",
+    "eslint-plugin-unicorn": "^73.0.0",
+    "typescript-eslint": "^8.67.0"
   },
   "peerDependenciesMeta": {
     "@unocss/eslint-plugin": {
@@ -58,6 +57,13 @@
     },
     "typescript-eslint": {
       "optional": true
+    }
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.22.0",
+      "onFail": "download"
     }
   }
 }

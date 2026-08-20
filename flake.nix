@@ -17,7 +17,7 @@
           devShells.default = pkgs.mkShell {
             packages = with pkgs; [
               nodejs_latest
-              corepack
+              pnpm
               # lsps
               nil
               nixd
