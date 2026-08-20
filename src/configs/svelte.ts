@@ -1,7 +1,7 @@
 import { composer } from 'eslint-flat-config-utils'
 
 import { Opts, toGlobals } from '../lib/opts'
-import { svelteImport, svelteMod, tsMod } from '../lib/plugins'
+import { mods } from '../lib/plugins'
 
 const svelte = async (opts: Opts) => {
   const {
@@ -9,22 +9,20 @@ const svelte = async (opts: Opts) => {
     envModes = [],
   } = opts.svelte ?? {}
 
-  await svelteImport(opts)
-  if (!svelteMod) return
+  await mods.svelteImport(opts)
+  if (!mods.svelte) return
 
   return composer(
-    svelteMod.configs.prettier,
+    mods.svelte.configs.prettier,
     {
       files: ['**/*.svelte', '**/*.svelte.{js,ts}'],
       languageOptions: {
         globals: toGlobals(['browser', ...envModes]),
         parserOptions: {
-          ...tsMod
-            ? {
-              extraFileExtensions: ['.svelte'],
-              parser: tsMod.parser,
-            }
-            : {},
+          ...mods.ts && {
+            extraFileExtensions: ['.svelte'],
+            parser: mods.ts.parser,
+          },
           ...parserOptions,
         },
       },

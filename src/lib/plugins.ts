@@ -1,57 +1,39 @@
 import { Opts } from './opts'
 
-export let tsMod:
-  | Awaited<(typeof import('typescript-eslint'))['default']>
-  | undefined
+class Mods {
+  ts?: Awaited<(typeof import('typescript-eslint'))['default']>
+  svelte?: Awaited<(typeof import('eslint-plugin-svelte'))['default']>
+  tw?: Awaited<(typeof import('eslint-plugin-better-tailwindcss'))['default']>
 
-export const tsImport = async ({ debug }: Opts) => {
-  if (tsMod) return
-  try {
-    const mod = await import('typescript-eslint')
-    tsMod = mod.default
-  } catch (error) {
-    if (debug) console.error('ts module failed to load:', error)
+  async tsImport({ debug }: Opts) {
+    if (this.ts) return
+    try {
+      const mod = await import('typescript-eslint')
+      this.ts = mod.default
+    } catch (error) {
+      if (debug) console.error('ts module failed to load:', error)
+    }
+  }
+
+  async svelteImport({ debug }: Opts) {
+    if (this.svelte) return
+    try {
+      const mod = await import('eslint-plugin-svelte')
+      this.svelte = mod.default
+    } catch (error) {
+      if (debug) console.error('svelte module failed to load:', error)
+    }
+  }
+
+  async twImport({ debug }: Opts) {
+    if (this.tw) return
+    try {
+      const mod = await import('eslint-plugin-better-tailwindcss')
+      this.tw = mod.default
+    } catch (error) {
+      if (debug) console.error('tailwind module failed to load:', error)
+    }
   }
 }
 
-export let svelteMod:
-  | Awaited<(typeof import('eslint-plugin-svelte'))['default']>
-  | undefined
-
-export const svelteImport = async ({ debug }: Opts) => {
-  if (svelteMod) return
-  try {
-    const mod = await import('eslint-plugin-svelte')
-    svelteMod = mod.default
-  } catch (error) {
-    if (debug) console.error('svelte module failed to load:', error)
-  }
-}
-
-export let unocssMod:
-  | Awaited<(typeof import('@unocss/eslint-plugin'))['default']>
-  | undefined
-
-export const unocssImport = async ({ debug }: Opts) => {
-  if (unocssMod) return
-  try {
-    const mod = await import('@unocss/eslint-plugin')
-    unocssMod = mod.default
-  } catch (error) {
-    if (debug) console.error('unocss module failed to load:', error)
-  }
-}
-
-export let twMod:
-  | Awaited<(typeof import('eslint-plugin-better-tailwindcss'))['default']>
-  | undefined
-
-export const twImport = async ({ debug }: Opts) => {
-  if (twMod) return
-  try {
-    const mod = await import('eslint-plugin-better-tailwindcss')
-    twMod = mod.default
-  } catch (error) {
-    if (debug) console.error('tailwind module failed to load:', error)
-  }
-}
+export const mods = new Mods()

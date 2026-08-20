@@ -8,7 +8,7 @@ export default composer(
       'unicorn/better-regex': 'warn',
       'unicorn/filename-case': 'off',
       'unicorn/no-array-reduce': 'off',
-      'unicorn/prevent-abbreviations': 'off',
+      'unicorn/name-replacements': 'off',
     },
   },
 )

@@ -1,7 +1,7 @@
 import { composer } from 'eslint-flat-config-utils'
 
 import { Opts, toGlobals } from '../lib/opts'
-import { tsImport, tsMod } from '../lib/plugins'
+import { mods } from '../lib/plugins'
 
 const ts = async (opts: Opts) => {
   const {
@@ -9,11 +9,11 @@ const ts = async (opts: Opts) => {
     envModes = [],
   } = opts.ts ?? {}
 
-  await tsImport(opts)
-  if (!tsMod) return
+  await mods.tsImport(opts)
+  if (!mods.ts) return
 
   return composer(
-    tsMod.configs.strictTypeChecked,
+    mods.ts.configs.strictTypeChecked,
     {
       languageOptions: {
         globals: toGlobals(envModes),
@@ -25,7 +25,7 @@ const ts = async (opts: Opts) => {
     },
     {
       files: ['**/*.{js,mjs,cjs}'],
-      ...tsMod.configs.disableTypeChecked,
+      ...mods.ts.configs.disableTypeChecked,
     },
   )
 }
