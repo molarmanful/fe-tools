@@ -25,30 +25,28 @@
     "dprint.json",
     "dist/"
   ],
+  "dependencies": {
+    "globals": "^17.13.0"
+  },
   "devDependencies": {
-    "@types/node": "^26.2.0",
-    "globals": "^17.11.0",
-    "tsdown": "^0.22.14",
-    "typescript": "^6.0.2"
+    "@types/node": "^26.6.4",
+    "tsdown": "^0.23.0",
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "@unocss/eslint-plugin": "^66.8.0",
-    "eslint": "^10.8.1",
-    "eslint-config-flat-gitignore": "^2.3.0",
+    "eslint": "^10.12.0",
+    "eslint-config-flat-gitignore": "^2.4.0",
     "eslint-flat-config-utils": "^3.2.0",
-    "eslint-plugin-better-tailwindcss": "^4.7.0",
-    "eslint-plugin-perfectionist": "^5.10.1",
-    "eslint-plugin-regexp": "^3.2.0",
+    "eslint-plugin-better-tailwindcss": "^4.9.0",
+    "eslint-plugin-perfectionist": "^5.12.1",
+    "eslint-plugin-regexp": "^3.3.1",
     "eslint-plugin-svelte": "^3.23.0",
-    "eslint-plugin-unicorn": "^73.0.0",
-    "typescript-eslint": "^8.67.0"
+    "eslint-plugin-unicorn": "^77.0.0",
+    "typescript-eslint": "^8.71.1"
   },
   "peerDependenciesMeta": {
-    "@unocss/eslint-plugin": {
-      "optional": true
-    },
     "eslint-plugin-better-tailwindcss": {
       "optional": true
     },
@@ -62,7 +60,7 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "^11.22.0",
+      "version": "^12.10.1",
       "onFail": "download"
     }
   }

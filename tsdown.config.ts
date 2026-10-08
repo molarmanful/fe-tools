@@ -1,6 +1,5 @@
 import { defineConfig } from 'tsdown'
 
-export default defineConfig({
-  entry: './src/index.ts',
-  inlineOnly: false,
-})
+const cfg = defineConfig({ entry: './src/index.ts' })
+
+export default cfg

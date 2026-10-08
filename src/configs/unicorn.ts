@@ -1,7 +1,7 @@
 import { composer } from 'eslint-flat-config-utils'
 import unicorn from 'eslint-plugin-unicorn'
 
-export default composer(
+const cfg = composer(
   unicorn.configs.recommended,
   {
     rules: {
@@ -12,3 +12,5 @@ export default composer(
     },
   },
 )
+
+export default cfg

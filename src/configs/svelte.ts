@@ -35,7 +35,7 @@ const svelte = async (opts: Opts) => {
           {
             type: 'natural',
             internalPattern: [
-              String.raw`^\$lib`,
+              '^[$#]lib',
               String.raw`^\$app/types`,
             ],
           },

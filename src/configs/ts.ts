@@ -12,7 +12,7 @@ const ts = async (opts: Opts) => {
   await mods.tsImport(opts)
   if (!mods.ts) return
 
-  return composer(
+  return composer().append(
     mods.ts.configs.strictTypeChecked,
     {
       languageOptions: {

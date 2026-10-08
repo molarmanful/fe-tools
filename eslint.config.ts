@@ -1,7 +1,9 @@
 import { molarmanfulLint } from './src'
 
-export default molarmanfulLint({
+const cfg = molarmanfulLint({
   ts: {
     envModes: ['node'],
   },
 })
+
+export default cfg
