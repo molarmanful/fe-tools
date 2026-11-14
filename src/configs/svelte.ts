@@ -13,6 +13,7 @@ const svelte = async (opts: Opts) => {
   if (!mods.svelte) return
 
   return composer(
+    mods.svelte.configs.recommended,
     mods.svelte.configs.prettier,
     {
       files: ['**/*.svelte', '**/*.svelte.{js,ts}'],
@@ -27,8 +28,6 @@ const svelte = async (opts: Opts) => {
         },
       },
       rules: {
-        // TODO: remove after https://github.com/sveltejs/svelte-eslint-parser/issues/657
-        '@typescript-eslint/no-confusing-void-expression': 'off',
         'unicorn/no-top-level-assignment-in-function': 'off',
         'perfectionist/sort-imports': [
           'error',

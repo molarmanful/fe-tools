@@ -1,0 +1,4 @@
+minimumReleaseAgeExclude:
+  - '@eslint/config-array@0.23.6'
+  - '@stylistic/eslint-plugin@6.0.0'
+  - eslint@10.15.0
