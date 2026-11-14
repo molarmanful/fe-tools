@@ -28,6 +28,7 @@ const svelte = async (opts: Opts) => {
         },
       },
       rules: {
+        'svelte/block-lang': ['error', { script: ['ts'] }],
         'unicorn/no-top-level-assignment-in-function': 'off',
         'svelte/prefer-svelte-reactivity': 'off',
         'svelte/require-optimized-style-attribute': 'error',
